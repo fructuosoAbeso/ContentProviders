@@ -1,11 +1,13 @@
-App 2: Cliente de Login (Remote Login)
+Cliente de Login (Remote Login)
+
 ¿Qué hace esta App?
+
 Es el "Cliente" que no tiene base de datos propia. Utiliza el Content Provider de la App 1 para validar si un usuario y contraseña existen y permitirle el acceso.
 
 Tecnologías utilizadas
 ContentResolver: Para realizar consultas a la URI de la App 1.
 
-Queries (Visibilidad): Declaración de permisos para ver otras apps.
+ Declaración de permisos para ver otras apps.
 
 Errores solucionados
 Provider no encontrado (Android 11+): La App 2 no "veía" a la App 1 por restricciones de seguridad. Solución: Añadimos el bloque <queries> en el AndroidManifest.xml.
