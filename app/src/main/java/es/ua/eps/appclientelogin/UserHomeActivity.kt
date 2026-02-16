@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class UserPageActivity : AppCompatActivity() {
+class UserHomeActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_USERNAME = "extra_username"
@@ -12,11 +12,11 @@ class UserPageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user_page)
+        setContentView(R.layout.activity_user_home)
 
         val tvWelcome: TextView = findViewById(R.id.tvWelcome)
 
-        // Recoger el username pasado desde UserLoginActivity
+        // Recoger el username pasado desde LoginClientActivity
         val username = intent.getStringExtra(EXTRA_USERNAME)
 
         tvWelcome.text = "¡Bienvenido, $username!"
